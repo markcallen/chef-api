@@ -1,3 +1,6 @@
 *.swp
 node_modules
 test.js
+.vagrant
+Berksfile.lock
+test/admin.pem

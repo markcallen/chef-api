@@ -1,6 +1,6 @@
 var options = {
     user_name: "admin",
-    key_path: "./admin.pem",
+    key_path: "./test/admin.pem",
     url: "https://33.33.33.50",
     ca: null
 };

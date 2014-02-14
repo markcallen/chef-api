@@ -85,3 +85,38 @@ chef.getNode("mynodes.fqdn", function(err, res){
 ###API Methods
 
 chef-api provides a high level abstraction from the Chef Server API. Please consult the official docs at http://docs.opscode.com/api_chef_server.html for API specifics.
+
+## Running Tests
+
+The test suites require Vagrant (http://docs.vagrantup.com/v2/installation/) and Berkshelf (http://berkshelf.com/)
+
+Install Berkshef
+
+    $ sudo gem install berkshelf
+
+Install Vagrant.  Following instructions at http://docs.vagrantup.com/v2/installation/
+
+Install Vagrant plugins
+
+    $ vagrant plugin install vagrant-omnibus
+    $ vagrant plugin install vagrant-berkshelf
+    $ vagrant plugin install vagrant-cachier
+
+
+To run the test suite, first invoke the following command within the repo, installing the development dependencies:
+
+    $ npm install
+
+Install the chef-server recipe to your local Berkshelf
+
+    $ berks install
+
+Start up vagrant
+
+    $ vagrant up
+
+Then run the tests:
+
+    $ make test
+
+

@@ -2,18 +2,18 @@ var expect = require("../node_modules/expect.js");
 
 var chef = require('./setup').chef;
 
+var node = {
+  "name": "test-node-1",
+  "run_list": [
+  ],
+  "normal": {
+    "tags": [
+    ]
+  }
+};
+    
 describe('nodes', function() {
   before(function(done){
-    var node = {
-      "name": "test-node-1",
-      "run_list": [
-      ],
-      "normal": {
-        "tags": [
-        ]
-      }
-    };
-    
     chef.createNode(node, function(err, res) {
       if (err) 
         throw err;

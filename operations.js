@@ -83,7 +83,7 @@ exports.operations = function(config){
                               fn(null, JSON.parse(response.body));
                           }
                           catch(e){
-                              fn(new Error("Cannot parse response body"), null);
+                              fn(new Error("Cannot parse response body: " + e), null);
                           }
                       }
                       else{

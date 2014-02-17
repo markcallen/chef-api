@@ -4,3 +4,5 @@ test.js
 .vagrant
 Berksfile.lock
 test/admin.pem
+.chef/admin.pem
+.chef/chef-validator.pem

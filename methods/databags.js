@@ -50,6 +50,13 @@ exports.methods = function(config){
             http_methods.del([config.host_url, "data", databag, item].join("/"), function(err, response){
                 fn(err, response);
             });
+        },
+
+        // No documented
+        deleteDataBag: function(data, fn){
+            http_methods.del([config.host_url, "data", data].join("/"), function(err, response){
+                fn(err, response);
+            });
         }
     }
 

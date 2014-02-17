@@ -94,9 +94,9 @@ exports.operations = function(config){
                                   message = [message, body.error].join(" - ");
                           }
                           catch(e){
-                              fn(new Error(message), null);
+                              fn(new Error(message), response);
                           }
-                          fn(new Error(message), null);
+                          fn(new Error(message), response);
                       }
                     }
                     else {

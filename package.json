@@ -21,8 +21,8 @@
   },
   "devDependencies" : {
     "mocha": "0.3.x",
-    "expect.js": "0.2.x"
-
+    "expect.js": "0.2.x",
+    "jsonfile": "1.1.x"
   },
   "scripts" : {
     "test" : "make test"
